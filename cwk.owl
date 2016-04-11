@@ -43,13 +43,37 @@
 
     <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#on -->
 
-    <ObjectProperty rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#on"/>
+    <ObjectProperty rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#on">
+        <rdfs:domain rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Room"/>
+        <rdfs:range rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Floor"/>
+    </ObjectProperty>
     
 
 
     <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#partOf -->
 
-    <ObjectProperty rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#partOf"/>
+    <ObjectProperty rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#partOf">
+        <rdfs:domain rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Floor"/>
+        <rdfs:range rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Building"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#track -->
+
+    <ObjectProperty rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#track">
+        <rdfs:domain rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Programme_Item"/>
+        <rdfs:range rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Track"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#with -->
+
+    <ObjectProperty rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#with">
+        <rdfs:domain rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Programme_Item"/>
+        <rdfs:range rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
+    </ObjectProperty>
     
 
 
@@ -72,6 +96,14 @@
     
 
 
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#id -->
+
+    <DatatypeProperty rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#id">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    </DatatypeProperty>
+    
+
+
     <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#name -->
 
     <DatatypeProperty rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#name">
@@ -83,6 +115,7 @@
     <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#scheduledAt -->
 
     <DatatypeProperty rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#scheduledAt">
+        <rdfs:domain rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Programme_Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </DatatypeProperty>
     
@@ -213,6 +246,12 @@
 
     <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Track">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#name"/>
+                <allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </Restriction>
+        </rdfs:subClassOf>
     </Class>
     
 
