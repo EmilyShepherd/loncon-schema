@@ -1,0 +1,268 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:cwk="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <Ontology rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emily Shepherd - ams2g11@ecs.soton.ac.uk</rdfs:comment>
+    </Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#author -->
+
+    <AnnotationProperty rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#author"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#on -->
+
+    <ObjectProperty rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#on"/>
+    
+
+
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#partOf -->
+
+    <ObjectProperty rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#partOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#email -->
+
+    <DatatypeProperty rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#email"/>
+    
+
+
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#name -->
+
+    <DatatypeProperty rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#name"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Building -->
+
+    <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Building">
+        <rdfs:subClassOf rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Place"/>
+    </Class>
+    
+
+
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Film_Screening -->
+
+    <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Film_Screening">
+        <rdfs:subClassOf rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Programme_Item"/>
+    </Class>
+    
+
+
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Floor -->
+
+    <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Floor">
+        <rdfs:subClassOf rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Place"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#partOf"/>
+                <allValuesFrom rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Building"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Guest_of_Honour -->
+
+    <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Guest_of_Honour">
+        <rdfs:subClassOf rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
+    </Class>
+    
+
+
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Panel_Session -->
+
+    <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Panel_Session">
+        <rdfs:subClassOf rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Programme_Item"/>
+    </Class>
+    
+
+
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person -->
+
+    <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#name"/>
+                <allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Place -->
+
+    <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Place"/>
+    
+
+
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Play -->
+
+    <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Play">
+        <rdfs:subClassOf rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Programme_Item"/>
+    </Class>
+    
+
+
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Programme_Item -->
+
+    <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Programme_Item">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </Class>
+    
+
+
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Reading -->
+
+    <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Reading">
+        <rdfs:subClassOf rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Programme_Item"/>
+    </Class>
+    
+
+
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Room -->
+
+    <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Room">
+        <rdfs:subClassOf rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Place"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#on"/>
+                <allValuesFrom rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Floor"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Track -->
+
+    <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Track">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Emily -->
+
+    <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Emily">
+        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
+        <cwk:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ams2g11@ecs.soton.ac.uk</cwk:email>
+        <cwk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#Name">Emily Shepherd</cwk:name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Zepler -->
+
+    <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Zepler">
+        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Building"/>
+    </NamedIndividual>
+    
+
+
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#1st -->
+
+    <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#1st">
+        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Floor"/>
+        <cwk:partOf rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Zepler"/>
+    </NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Building"/>
+            <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Film_Screening"/>
+            <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Floor"/>
+            <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Panel_Session"/>
+            <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
+            <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Play"/>
+            <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Programme_Item"/>
+            <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Reading"/>
+            <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Room"/>
+            <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Track"/>
+        </members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.1.20160306-0033) https://github.com/owlcs/owlapi -->
+
