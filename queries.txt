@@ -39,7 +39,7 @@ WHERE
 SELECT Distinct ?p
 WHERE
 {
-    ?x rdf:type :Science .
+    ?x :track :Science .
     ?x rdf:type :Panel_Session .
     ?x :moderatedBy ?p .
 }
@@ -48,7 +48,7 @@ WHERE
 SELECT (COUNT(Distinct ?p) AS ?num)
 WHERE
 {
-    ?x rdf:type :Academic .
+    ?x :track :Academic .
     ?x :with ?p .
 }
 
@@ -57,7 +57,7 @@ SELECT ?x
 WHERE
 {
     ?x :scheduledAt ?time .
-    ?x rdf:type :Politics .
+    ?x :track :Politics .
 }
 ORDER BY ?time
 LIMIT 1
