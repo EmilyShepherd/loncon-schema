@@ -19,4 +19,14 @@ WHERE
     )
 }
 
+# Which programme items feature both Charles Stross and David Clements?
+SELECT Distinct ?x
+WHERE
+{
+    ?x :scheduledAt ?time .
+    ?x :with ?p .
+    ?p :name ?name .
+    FILTER(?name = "Charles Stross" || ?name = "David Clements")
+}
+
 # vim: set syntax=sparql:
