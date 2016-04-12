@@ -161,6 +161,30 @@
     
 
 
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Diverse_Panel -->
+
+    <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Diverse_Panel">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Panel_Session"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#with"/>
+                        <minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</minQualifiedCardinality>
+                        <onClass rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Female_Person"/>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#with"/>
+                        <minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</minQualifiedCardinality>
+                        <onClass rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Male_Person"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+    </Class>
+    
+
+
     <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Female_Person -->
 
     <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Female_Person">
