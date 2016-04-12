@@ -62,7 +62,6 @@
 
     <ObjectProperty rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#track">
         <rdfs:domain rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Programme_Item"/>
-        <rdfs:range rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Track"/>
         <rdfs:comment>Specifies that a Programme_Item belongs to a particular Track</rdfs:comment>
     </ObjectProperty>
     
@@ -137,11 +136,35 @@
     
 
 
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Academic -->
+
+    <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Academic">
+        <rdfs:subClassOf rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Track"/>
+    </Class>
+    
+
+
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Art -->
+
+    <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Art">
+        <rdfs:subClassOf rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Track"/>
+    </Class>
+    
+
+
     <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Building -->
 
     <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Building">
         <rdfs:subClassOf rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Place"/>
         <rdfs:comment>A building in which Programme_Items will take place.</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Female_Person -->
+
+    <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Female_Person">
+        <rdfs:subClassOf rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
     </Class>
     
 
@@ -175,6 +198,14 @@
     <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Guest_of_Honour">
         <rdfs:subClassOf rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
         <rdfs:comment>A distinguished or important Person, who is present at Loncon</rdfs:comment>
+    </Class>
+    
+
+
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Male_Person -->
+
+    <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Male_Person">
+        <rdfs:subClassOf rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
     </Class>
     
 
@@ -235,6 +266,14 @@
     
 
 
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Poltics -->
+
+    <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Poltics">
+        <rdfs:subClassOf rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Track"/>
+    </Class>
+    
+
+
     <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Programme_Item -->
 
     <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Programme_Item">
@@ -268,8 +307,7 @@
     <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Reading -->
 
     <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Reading">
-        <rdfs:subClassOf rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Programme_Item"/>
-        <rdfs:comment>An event during which a text is read out by one or more Persons.</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Track"/>
     </Class>
     
 
@@ -289,6 +327,14 @@
     
 
 
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Science -->
+
+    <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Science">
+        <rdfs:subClassOf rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Track"/>
+    </Class>
+    
+
+
     <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Social_Event -->
 
     <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Social_Event">
@@ -301,13 +347,6 @@
 
     <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Track">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#name"/>
-                <qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</qualifiedCardinality>
-                <onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment>A grouping of Programme_Items</rdfs:comment>
     </Class>
     
@@ -324,28 +363,10 @@
     
 
 
-    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Academic -->
-
-    <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Academic">
-        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Track"/>
-        <cwk:name>Academic</cwk:name>
-    </NamedIndividual>
-    
-
-
-    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Art -->
-
-    <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Art">
-        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Track"/>
-        <cwk:name>Art</cwk:name>
-    </NamedIndividual>
-    
-
-
     <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Emily -->
 
     <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Emily">
-        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
+        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Female_Person"/>
         <cwk:email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ams2g11@ecs.soton.ac.uk</cwk:email>
         <cwk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emily Shepherd</cwk:name>
     </NamedIndividual>
@@ -355,9 +376,9 @@
     <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Event_1012 -->
 
     <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Event_1012">
+        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Academic"/>
         <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Social_Event"/>
         <cwk:heldIn rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Room_CS6"/>
-        <cwk:track rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Academic"/>
         <cwk:id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1012</cwk:id>
         <cwk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Diversity in SPeculative Fiction&quot;: Welcome to the Academic Conference</cwk:name>
         <cwk:scheduledAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-14T10:30:00</cwk:scheduledAt>
@@ -368,10 +389,10 @@
     <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Event_1015 -->
 
     <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Event_1015">
+        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Art"/>
         <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Panel_Session"/>
         <cwk:heldIn rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Room_CS10"/>
         <cwk:moderatedBy rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#js"/>
-        <cwk:track rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Art"/>
         <cwk:with rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#jh"/>
         <cwk:with rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#mm"/>
         <cwk:with rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#rh"/>
@@ -386,9 +407,9 @@
 
     <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Event_1021">
         <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Panel_Session"/>
+        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Science"/>
         <cwk:heldIn rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Room_CS13"/>
         <cwk:moderatedBy rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#jj"/>
-        <cwk:track rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Science"/>
         <cwk:with rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#nm"/>
         <cwk:with rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#ph"/>
         <cwk:with rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#rn"/>
@@ -424,26 +445,6 @@
     
 
 
-    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Science -->
-
-    <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Science">
-        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Track"/>
-        <cwk:name>Science</cwk:name>
-    </NamedIndividual>
-    
-
-
-    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Test -->
-
-    <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Test">
-        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Film_Screening"/>
-        <cwk:id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</cwk:id>
-        <cwk:name>Lol Mate</cwk:name>
-        <cwk:scheduledAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-15T05:00:00</cwk:scheduledAt>
-    </NamedIndividual>
-    
-
-
     <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Zepler -->
 
     <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Zepler">
@@ -455,7 +456,7 @@
     <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#jh -->
 
     <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#jh">
-        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
+        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Male_Person"/>
         <cwk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Harris</cwk:name>
     </NamedIndividual>
     
@@ -464,7 +465,7 @@
     <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#jj -->
 
     <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#jj">
-        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
+        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Male_Person"/>
         <cwk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Johan Jonsson</cwk:name>
     </NamedIndividual>
     
@@ -473,7 +474,7 @@
     <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#js -->
 
     <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#js">
-        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
+        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Male_Person"/>
         <cwk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joe Siclari</cwk:name>
     </NamedIndividual>
     
@@ -482,7 +483,7 @@
     <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#mm -->
 
     <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#mm">
-        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
+        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Male_Person"/>
         <cwk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maurizo Manzieri</cwk:name>
     </NamedIndividual>
     
@@ -491,7 +492,7 @@
     <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#nm -->
 
     <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#nm">
-        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
+        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Male_Person"/>
         <cwk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neil McKellar</cwk:name>
     </NamedIndividual>
     
@@ -500,7 +501,7 @@
     <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#ph -->
 
     <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#ph">
-        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
+        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Male_Person"/>
         <cwk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phil Huggins</cwk:name>
     </NamedIndividual>
     
@@ -509,7 +510,7 @@
     <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#rh -->
 
     <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#rh">
-        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
+        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Male_Person"/>
         <cwk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rian Hughes</cwk:name>
     </NamedIndividual>
     
@@ -518,7 +519,7 @@
     <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#rn -->
 
     <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#rn">
-        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
+        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Male_Person"/>
         <cwk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ramez Naam</cwk:name>
     </NamedIndividual>
     
@@ -527,7 +528,7 @@
     <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#sd -->
 
     <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#sd">
-        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
+        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Female_Person"/>
         <cwk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sarah Dillon</cwk:name>
     </NamedIndividual>
     
@@ -536,7 +537,7 @@
     <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#vo -->
 
     <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#vo">
-        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
+        <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Female_Person"/>
         <cwk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Val Ontell</cwk:name>
     </NamedIndividual>
     
@@ -573,6 +574,13 @@
             <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
             <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Place"/>
             <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Programme_Item"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
+            <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Place"/>
             <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Track"/>
         </members>
     </rdf:Description>
