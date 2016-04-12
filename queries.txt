@@ -46,4 +46,14 @@ WHERE
     ?x :with ?p .
 }
 
+# What is the earliest programme item in the politics track?
+SELECT ?x
+WHERE
+{
+    ?x :scheduledAt ?time .
+    ?x :track :Politics .
+}
+ORDER BY ?time
+LIMIT 1
+
 # vim: set syntax=sparql:
