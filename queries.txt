@@ -1,8 +1,14 @@
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+##
+# COMP6215 Ontology Design Exercise
+# =================================
+# 
+# SPARQL queries for the Loncon Ontology and sample data
+#
+# Emily Shepherd <ams2g11@ecs.soton.ac.uk>
+#
 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX : <http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#>
 
 # Where are the film screenings that are scheduled on Saturday 15th
