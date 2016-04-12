@@ -202,6 +202,25 @@
     
 
 
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Honored_Reading -->
+
+    <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Honored_Reading">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Reading"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#with"/>
+                        <minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</minQualifiedCardinality>
+                        <onClass rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Guest_of_Honour"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+    </Class>
+    
+
+
     <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Male_Person -->
 
     <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Male_Person">
