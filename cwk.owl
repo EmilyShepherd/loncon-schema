@@ -30,6 +30,14 @@
     
 
 
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#moderatedBy -->
+
+    <ObjectProperty rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#moderatedBy">
+        <rdfs:subPropertyOf rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#with"/>
+    </ObjectProperty>
+    
+
+
     <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#on -->
 
     <ObjectProperty rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#on">
@@ -348,9 +356,9 @@
     <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Event_1015">
         <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Panel_Session"/>
         <cwk:heldIn rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Room_CS10"/>
+        <cwk:moderatedBy rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#js"/>
         <cwk:track rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Art"/>
         <cwk:with rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#jh"/>
-        <cwk:with rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#js"/>
         <cwk:with rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#mm"/>
         <cwk:with rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#rh"/>
         <cwk:id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1015</cwk:id>
@@ -365,8 +373,8 @@
     <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Event_1021">
         <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Panel_Session"/>
         <cwk:heldIn rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Room_CS13"/>
+        <cwk:moderatedBy rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#jj"/>
         <cwk:track rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Science"/>
-        <cwk:with rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#jj"/>
         <cwk:with rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#nm"/>
         <cwk:with rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#ph"/>
         <cwk:with rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#rn"/>
