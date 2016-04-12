@@ -183,6 +183,20 @@
 
     <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Panel_Session">
         <rdfs:subClassOf rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Programme_Item"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#with"/>
+                <minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</minQualifiedCardinality>
+                <onClass rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#moderatedBy"/>
+                <qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</qualifiedCardinality>
+                <onClass rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
+            </Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>An event involving one or more Persons discussing a topic and/or answering questions from the floor</rdfs:comment>
     </Class>
     
