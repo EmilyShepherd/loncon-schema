@@ -338,7 +338,7 @@
         <cwk:track rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Academic"/>
         <cwk:id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1012</cwk:id>
         <cwk:name>&quot;Diversity in SPeculative Fiction&quot;: Welcome to the Academic Conference</cwk:name>
-        <cwk:scheduledAt>2016-04-14T10:30:00</cwk:scheduledAt>
+        <cwk:scheduledAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-14T10:30:00</cwk:scheduledAt>
     </NamedIndividual>
     
 
@@ -355,7 +355,7 @@
         <cwk:with rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#rh"/>
         <cwk:id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1015</cwk:id>
         <cwk:name>Chris Foss - Art and Influence</cwk:name>
-        <cwk:scheduledAt>2014-04-14T11:00:00</cwk:scheduledAt>
+        <cwk:scheduledAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-04-14T11:00:00</cwk:scheduledAt>
     </NamedIndividual>
     
 
@@ -373,7 +373,7 @@
         <cwk:with rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#vo"/>
         <cwk:id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1021</cwk:id>
         <cwk:name>Internet Privacy 101</cwk:name>
-        <cwk:scheduledAt>2014-04-14T11:00:00</cwk:scheduledAt>
+        <cwk:scheduledAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-04-14T11:00:00</cwk:scheduledAt>
     </NamedIndividual>
     
 
