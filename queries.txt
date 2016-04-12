@@ -29,4 +29,13 @@ WHERE
     FILTER(?name = "Charles Stross" || ?name = "David Clements")
 }
 
+# Who are the moderators of the science track panel sessions?
+SELECT Distinct ?p
+WHERE
+{
+    ?x :track :Science .
+    ?x rdf:type :Panel_Session .
+    ?x :moderatedBy ?p .
+}
+
 # vim: set syntax=sparql:
