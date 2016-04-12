@@ -38,4 +38,12 @@ WHERE
     ?x :moderatedBy ?p .
 }
 
+# How many people are participating in the academic track?
+SELECT (COUNT(Distinct ?p) AS ?num)
+WHERE
+{
+    ?x :track :Academic .
+    ?x :with ?p .
+}
+
 # vim: set syntax=sparql:
