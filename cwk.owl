@@ -16,23 +16,6 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#author -->
-
-    <AnnotationProperty rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#author"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -115,7 +98,6 @@
     <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#scheduledAt -->
 
     <DatatypeProperty rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#scheduledAt">
-        <rdfs:domain rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Programme_Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </DatatypeProperty>
     
@@ -184,14 +166,9 @@
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#email"/>
-                <someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
                 <onProperty rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#name"/>
-                <allValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+                <qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</qualifiedCardinality>
+                <onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </Restriction>
         </rdfs:subClassOf>
     </Class>
@@ -216,6 +193,27 @@
 
     <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Programme_Item">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#id"/>
+                <qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</qualifiedCardinality>
+                <onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#name"/>
+                <qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</qualifiedCardinality>
+                <onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#scheduledAt"/>
+                <qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</qualifiedCardinality>
+                <onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </Restriction>
+        </rdfs:subClassOf>
     </Class>
     
 
@@ -246,12 +244,6 @@
 
     <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Track">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#name"/>
-                <allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </Restriction>
-        </rdfs:subClassOf>
     </Class>
     
 
@@ -281,6 +273,8 @@
 
     <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Test">
         <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Film_Screening"/>
+        <cwk:id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</cwk:id>
+        <cwk:name>Lol Mate</cwk:name>
         <cwk:scheduledAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-15T05:00:00</cwk:scheduledAt>
     </NamedIndividual>
     
@@ -315,14 +309,25 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Building"/>
-            <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Film_Screening"/>
             <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Floor"/>
-            <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Panel_Session"/>
-            <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
-            <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Play"/>
-            <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Programme_Item"/>
-            <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Reading"/>
             <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Room"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Film_Screening"/>
+            <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Panel_Session"/>
+            <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Play"/>
+            <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Reading"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
+            <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Place"/>
+            <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Programme_Item"/>
             <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Track"/>
         </members>
     </rdf:Description>
