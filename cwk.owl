@@ -29,6 +29,7 @@
     <ObjectProperty rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#on">
         <rdfs:domain rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Room"/>
         <rdfs:range rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Floor"/>
+        <rdfs:comment>Specifies that a Room is on a given Floor</rdfs:comment>
     </ObjectProperty>
     
 
@@ -38,6 +39,7 @@
     <ObjectProperty rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#partOf">
         <rdfs:domain rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Floor"/>
         <rdfs:range rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Building"/>
+        <rdfs:comment>Specifies that a Floor belongs to a specified Building</rdfs:comment>
     </ObjectProperty>
     
 
@@ -47,6 +49,7 @@
     <ObjectProperty rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#track">
         <rdfs:domain rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Programme_Item"/>
         <rdfs:range rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Track"/>
+        <rdfs:comment>Specifies that a Programme_Item belongs to a particular Track</rdfs:comment>
     </ObjectProperty>
     
 
@@ -56,6 +59,7 @@
     <ObjectProperty rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#with">
         <rdfs:domain rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Programme_Item"/>
         <rdfs:range rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
+        <rdfs:comment>Specifies that a Programme_Item involves a certain Person</rdfs:comment>
     </ObjectProperty>
     
 
@@ -75,6 +79,7 @@
 
     <DatatypeProperty rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#email">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>An email address of a Person</rdfs:comment>
     </DatatypeProperty>
     
 
@@ -83,6 +88,7 @@
 
     <DatatypeProperty rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#id">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+        <rdfs:comment>The four digit ID of a Programme_Item</rdfs:comment>
     </DatatypeProperty>
     
 
@@ -91,6 +97,7 @@
 
     <DatatypeProperty rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#name">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The name of an item or person</rdfs:comment>
     </DatatypeProperty>
     
 
@@ -100,6 +107,7 @@
     <DatatypeProperty rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#scheduledAt">
         <rdfs:domain rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Programme_Item"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment>The date and time at which a Program_Item is scheduled to take place</rdfs:comment>
     </DatatypeProperty>
     
 
@@ -119,6 +127,7 @@
 
     <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Building">
         <rdfs:subClassOf rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Place"/>
+        <rdfs:comment>A building in which Programme_Items will take place.</rdfs:comment>
     </Class>
     
 
@@ -127,6 +136,7 @@
 
     <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Film_Screening">
         <rdfs:subClassOf rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Programme_Item"/>
+        <rdfs:comment>A screening of a particular film</rdfs:comment>
     </Class>
     
 
@@ -141,6 +151,7 @@
                 <allValuesFrom rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Building"/>
             </Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>A floor within a building which contains one or more Rooms</rdfs:comment>
     </Class>
     
 
@@ -149,6 +160,7 @@
 
     <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Guest_of_Honour">
         <rdfs:subClassOf rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
+        <rdfs:comment>A distinguished or important Person, who is present at Loncon</rdfs:comment>
     </Class>
     
 
@@ -157,6 +169,7 @@
 
     <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Panel_Session">
         <rdfs:subClassOf rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Programme_Item"/>
+        <rdfs:comment>An event involving one or more Persons discussing a topic and/or answering questions from the floor</rdfs:comment>
     </Class>
     
 
@@ -172,13 +185,16 @@
                 <onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>A human being</rdfs:comment>
     </Class>
     
 
 
     <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Place -->
 
-    <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Place"/>
+    <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Place">
+        <rdfs:comment>A general spacial location</rdfs:comment>
+    </Class>
     
 
 
@@ -186,6 +202,7 @@
 
     <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Play">
         <rdfs:subClassOf rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Programme_Item"/>
+        <rdfs:comment>An event in which a story is acted out by one or more Persons</rdfs:comment>
     </Class>
     
 
@@ -215,6 +232,7 @@
                 <onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>Any timetabled event</rdfs:comment>
     </Class>
     
 
@@ -223,6 +241,7 @@
 
     <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Reading">
         <rdfs:subClassOf rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Programme_Item"/>
+        <rdfs:comment>An event during which a text is read out by one or more Persons.</rdfs:comment>
     </Class>
     
 
@@ -237,6 +256,7 @@
                 <allValuesFrom rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Floor"/>
             </Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>A room within a building, in which a Programme_Item shall take place</rdfs:comment>
     </Class>
     
 
@@ -252,6 +272,7 @@
                 <onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>A grouping of Programme_Items</rdfs:comment>
     </Class>
     
 
