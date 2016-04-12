@@ -337,7 +337,7 @@
         <cwk:heldIn rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Room_CS6"/>
         <cwk:track rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Academic"/>
         <cwk:id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1012</cwk:id>
-        <cwk:name>&quot;Diversity in SPeculative Fiction&quot;: Welcome to the Academic Conference</cwk:name>
+        <cwk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Diversity in SPeculative Fiction&quot;: Welcome to the Academic Conference</cwk:name>
         <cwk:scheduledAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-14T10:30:00</cwk:scheduledAt>
     </NamedIndividual>
     
@@ -354,7 +354,7 @@
         <cwk:with rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#mm"/>
         <cwk:with rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#rh"/>
         <cwk:id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1015</cwk:id>
-        <cwk:name>Chris Foss - Art and Influence</cwk:name>
+        <cwk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chris Foss - Art and Influence</cwk:name>
         <cwk:scheduledAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-04-14T11:00:00</cwk:scheduledAt>
     </NamedIndividual>
     
@@ -372,7 +372,7 @@
         <cwk:with rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#rn"/>
         <cwk:with rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#vo"/>
         <cwk:id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1021</cwk:id>
-        <cwk:name>Internet Privacy 101</cwk:name>
+        <cwk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Internet Privacy 101</cwk:name>
         <cwk:scheduledAt rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-04-14T11:00:00</cwk:scheduledAt>
     </NamedIndividual>
     
@@ -434,7 +434,7 @@
 
     <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#jh">
         <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
-        <cwk:name>John Harris</cwk:name>
+        <cwk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Harris</cwk:name>
     </NamedIndividual>
     
 
@@ -443,7 +443,7 @@
 
     <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#jj">
         <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
-        <cwk:name>Johan Jonsson</cwk:name>
+        <cwk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Johan Jonsson</cwk:name>
     </NamedIndividual>
     
 
@@ -452,7 +452,7 @@
 
     <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#js">
         <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
-        <cwk:name>Joe Siclari</cwk:name>
+        <cwk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joe Siclari</cwk:name>
     </NamedIndividual>
     
 
@@ -461,7 +461,7 @@
 
     <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#mm">
         <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
-        <cwk:name>Maurizo Manzieri</cwk:name>
+        <cwk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maurizo Manzieri</cwk:name>
     </NamedIndividual>
     
 
@@ -470,7 +470,7 @@
 
     <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#nm">
         <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
-        <cwk:name>Neil McKellar</cwk:name>
+        <cwk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neil McKellar</cwk:name>
     </NamedIndividual>
     
 
@@ -479,7 +479,7 @@
 
     <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#ph">
         <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
-        <cwk:name>Phil Huggins</cwk:name>
+        <cwk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phil Huggins</cwk:name>
     </NamedIndividual>
     
 
@@ -488,7 +488,7 @@
 
     <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#rh">
         <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
-        <cwk:name>Rian Hughes</cwk:name>
+        <cwk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rian Hughes</cwk:name>
     </NamedIndividual>
     
 
@@ -497,7 +497,7 @@
 
     <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#rn">
         <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
-        <cwk:name>Ramez Naam</cwk:name>
+        <cwk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ramez Naam</cwk:name>
     </NamedIndividual>
     
 
@@ -506,7 +506,7 @@
 
     <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#sd">
         <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
-        <cwk:name>Sarah Dillon</cwk:name>
+        <cwk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sarah Dillon</cwk:name>
     </NamedIndividual>
     
 
@@ -515,7 +515,7 @@
 
     <NamedIndividual rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#vo">
         <rdf:type rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Person"/>
-        <cwk:name>Val Ontell</cwk:name>
+        <cwk:name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Val Ontell</cwk:name>
     </NamedIndividual>
     
 
