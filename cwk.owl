@@ -238,6 +238,25 @@
     
 
 
+    <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Multi_Interest_Film -->
+
+    <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Multi_Interest_Film">
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Film_Screening"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#track"/>
+                        <minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</minQualifiedCardinality>
+                        <onClass rdf:resource="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Track"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+    </Class>
+    
+
+
     <!-- http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Panel_Session -->
 
     <Class rdf:about="http://users.ecs.soton.ac.uk/ams2g11/COMP6215/cwk#Panel_Session">
